@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "VanillaSky",
+  "version": "1.0",
+  "description": "You would be able to catch user information at the LinkedIn Profile page.",  
+  "background": {
+    "persistent": false,
+    "scripts": ["js/background.js", "js/options.js"]
+  },
+  "icons": { "128": "image/icon.png" },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["js/content.js"]
+  }],
+  "options_page": "options.html",
+  "browser_action": {
+    "default_icon": "image/icon.png",
+    "default_popup":"popup.html",
+    "default_title": "VanillaSky"
+  },
+  "permissions": ["activeTab", "webNavigation", "tabs", "cookies", "<all_urls>", "background", "browsingData", "contextMenus", "downloads"]
+}

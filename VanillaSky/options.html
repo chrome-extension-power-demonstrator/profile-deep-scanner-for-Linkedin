@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head><title>Vanilla Sky Options</title></head>
+<style type="text/css">
+    #destination_type_select {
+        margin: 10px;
+    }
+
+    #destination_select_download_csv {
+        margin: 10px;
+    }
+
+    #destination_select_download_vcard {
+        margin: 10px;
+        display: none;
+    }
+
+    #destination_select_website {
+        margin: 10px;
+        display: none;
+    }
+
+    #destination_website_info {
+        -webkit-margin-before: 0;
+    }
+
+    #destination_selected_url, #destination_website_tab {
+        margin-top: 8px;
+    }
+
+    #lookup_select_website {
+        margin: 10px;
+    }
+
+    #lookup_website_info {
+        -webkit-margin-before: 0;
+    }
+
+    #lookup_selected_url, #lookup_website_tab {
+        margin-top: 8px;
+    }
+
+    .description {
+        font-size: 9pt;
+    }
+
+    .shortcut {
+        font-style: italic;
+        font-size: 7pt;
+    }
+
+    .spacer {
+        line-height: 20px;
+    }
+
+    #save {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+</style>
+<body>
+<h2>Vanilla Sky Options</h2>
+
+<div id="destination_type_select">
+    <div>
+        <input type='radio' id='destination_type_download_csv' name='destination_type' value='download_csv'
+               checked="checked">
+        Download CSV file
+        </input>
+    </div>
+    <div>
+        <input type='radio' id='destination_type_download_vcard' name='destination_type' value='download_vcard'>
+        Download VCard file
+        </input>
+    </div>
+</div>
+
+<div class="spacer">&nbsp;</div>
+
+<div id="destination_select_download_csv">
+    <label id='destination_label_csv' for="destination_csv_file">Filename:&nbsp;&nbsp;&nbsp;</label>
+    <input type='text' id='destination_csv_file' name='destination_csv_file' size="30" value="%NAME%.csv"/>
+</div>
+
+<div class="spacer">&nbsp;</div>
+
+<button id="save">Save</button>
+<div id="status"></div>
+
+<script src="vendor/jquery.min.js"></script>
+<script src="options.js"></script>
+</body>
+</html>
+
